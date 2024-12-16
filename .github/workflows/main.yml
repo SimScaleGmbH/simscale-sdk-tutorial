@@ -1,0 +1,42 @@
+name: "Build & Deploy HTML Tutorial"
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  # Build Job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build HTML
+        id: build-html
+        run: |
+          python -m pip install -r requirements.txt
+          make html
+
+      - name: Upload static files as artifact
+        id: deploy
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _build/
+
+  #Deploy job
+  deploy:
+    needs: build
+
+    permissions:
+      pages: write
+      id-token: write
+      
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+      
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
