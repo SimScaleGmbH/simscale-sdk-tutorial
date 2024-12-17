@@ -33,6 +33,8 @@ The following snippet shows an example of the creation and setup of the ``ApiCli
 
 .. code-block:: python
 
+    # Python
+
     import os
     from dotenv import load_dotenv()
 
@@ -50,3 +52,24 @@ The following snippet shows an example of the creation and setup of the ``ApiCli
     }
 
     api_client = sim.ApiClient(configuration)
+
+
+.. code-block:: csharp
+    
+    // C#
+    
+    using System;
+    using SimScale.Sdk.Api;
+    using SimScale.Sdk.Client;
+    using SimScale.Sdk.Model;
+    using dotenv.net;
+
+    DotEnv.Load();
+
+    var API_KEY = System.Environment.GetEnvironmentVariable("SIMSCALE_API_KEY")
+    var API_HOST_URL = "https://api.simscale.com/v0"
+
+    Configuration configuration = new Configuration();
+    
+    configuration.BasePath = API_HOST_URL
+    configuration.ApiKey.Add("X-API-KEY", API_KEY)
