@@ -14,41 +14,41 @@ When installing python packages, it is recommended that you make use of virtual 
 
 To install with pip, you can run the command:
 
-.. code-block:: shell
+.. code-block:: console
 
-    pip install git+https://github.com/SimScaleGmbH/simscale-python-sdk.git
+    $ pip install git+https://github.com/SimScaleGmbH/simscale-python-sdk.git
 
 If you want to install an specifiy version, you can run:
 
-.. code-block:: shell
+.. code-block:: console
 
-    pip install git+https://github.com/SimScaleGmbH/simscale-python-sdk.git@10.0.0
+    $ pip install git+https://github.com/SimScaleGmbH/simscale-python-sdk.git@10.0.0
 
 To install from source, first clone the repository:
 
-.. code-block:: shell
+.. code-block:: console
 
-    git clone https://github.com/SimScaleGmbH/simscale-python-sdk.git
+    $ git clone https://github.com/SimScaleGmbH/simscale-python-sdk.git
 
 Then you can use setuptools to perform the installation:
 
-.. code-block:: shell
+.. code-block:: console
 
-    cd simscale-python-sdk
+    $ cd simscale-python-sdk
 
-    python setup.py isntall --user
+    $ python setup.py isntall --user
 
 To test the installation, open a python prompt and import the library:
 
-.. code-bloc:: shell
+.. code-bloc:: console
 
-    python
+    $ python
 
 .. code-block:: python
 
     >>> import simscale_sdk
 
-If you don't see a 'ModuleNotFoundError', then you should be good to go.
+If you don't receive a 'ModuleNotFoundError', then you should be good to go.
 
 
 C# SDK
