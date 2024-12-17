@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-SimScale SDK Tutorial documentation
-===================================
+SimScale SDK Tutorial
+=====================
 
 Welcome to the tutorial for the SimScale SDK.
 
