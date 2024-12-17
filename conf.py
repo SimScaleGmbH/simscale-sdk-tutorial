@@ -26,3 +26,4 @@ pygments_style = "sphinx"
 
 html_theme = "furo"
 html_static_path = ["_static"]
+html_title = "SimScale SDK Tutorial"
