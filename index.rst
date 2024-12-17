@@ -21,6 +21,17 @@ simulations with FEA, CFD and LBM methods.
 For more information about the SimScale platform, please visit the 
 `official web page <https://www.simscale.com/>`_
 
+Target Audience
+---------------
+
+This tutorial is aimed towards users of the SimScale platform, who already have a notion
+of the simulation workflow, and want to lear how to automate their simualtions with the API. 
+If you are a new user to SimScale, please first get a grasp of the workflow
+and capabilites of the platform, for instance by following the introductory and advaced tutorials
+
+`Introductory Tutorials <https://www.simscale.com/tutorials>`_ 
+
+`Advanced Tutorials <https://www.simscale.com/docs/tutorials>`_
 
 .. toctree::
    :maxdepth: 2
