@@ -48,7 +48,7 @@ To test the installation, open a python prompt and import the library:
 
     import simscale_sdk
 
-If you don't receive a `ModuleNotFoundError`, then you should be good to go.
+If you don't receive a ``ModuleNotFoundError``, then you should be good to go.
 
 
 C# SDK
