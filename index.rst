@@ -6,7 +6,21 @@
 SimScale SDK Tutorial
 =====================
 
-Welcome to the tutorial for the SimScale SDK.
+*Welcome to the tutorial for the SimScale SDK!*
+
+The goal of this tutorial is to provide a first-touch introduction to the SimScale SDK,
+with a hands-on approach and practical examples.
+
+The SimScale SDK offers API access to the SimScale simulation platform, with 
+`Python <https://github.com/SimScaleGmbH/simscale-python-sdk>`_ and 
+`C# <https://github.com/SimScaleGmbH/simscale-csharp-sdk>`_ libraries available. 
+
+With the SDK library, the user can automate tasks to create, run and postprocess physics 
+simulations with FEA, CFD and LBM methods.
+
+For more information about the SimScale platform, please visit the 
+`official web page <https://www.simscale.com/>`_
+
 
 .. toctree::
    :maxdepth: 2
