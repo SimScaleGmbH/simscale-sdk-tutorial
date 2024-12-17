@@ -16,37 +16,37 @@ To install with pip, you can run the command:
 
 .. code-block:: console
 
-    $ pip install git+https://github.com/SimScaleGmbH/simscale-python-sdk.git
+    pip install git+https://github.com/SimScaleGmbH/simscale-python-sdk.git
 
 If you want to install an specifiy version, you can run:
 
 .. code-block:: console
 
-    $ pip install git+https://github.com/SimScaleGmbH/simscale-python-sdk.git@10.0.0
+    pip install git+https://github.com/SimScaleGmbH/simscale-python-sdk.git@10.0.0
 
 To install from source, first clone the repository:
 
 .. code-block:: console
 
-    $ git clone https://github.com/SimScaleGmbH/simscale-python-sdk.git
+    git clone https://github.com/SimScaleGmbH/simscale-python-sdk.git
 
 Then you can use setuptools to perform the installation:
 
 .. code-block:: console
 
-    $ cd simscale-python-sdk
+    cd simscale-python-sdk
 
-    $ python setup.py isntall --user
+    python setup.py isntall --user
 
 To test the installation, open a python prompt and import the library:
 
 .. code-block:: console
 
-    $ python
+    python
 
 .. code-block:: python
 
-    >>> import simscale_sdk
+    import simscale_sdk
 
 If you don't receive a `ModuleNotFoundError`, then you should be good to go.
 
@@ -71,26 +71,26 @@ It is recommended to use NuGet to install the latest versions:
 
 .. code-block:: console
 
-    $ Install-Package RestSharp
+    Install-Package RestSharp
 
-    $ Install-Package Newtonsoft.Json
+    Install-Package Newtonsoft.Json
 
-    $ Install-Package JsonSubTypes
+    Install-Package JsonSubTypes
 
 In order to perform the installation, first clone the reposotiry:
 
 
 .. code-block:: console
 
-    $ git clone https://github.com/SimScaleGmbH/simscale-csharp-sdk.git
+    git clone https://github.com/SimScaleGmbH/simscale-csharp-sdk.git
 
-    $ cd simscale-csharp-sdk
+    cd simscale-csharp-sdk
 
 Then generate the DLL using your preferred tool
 
 .. code-block:: console
 
-    $ dotnet build
+    dotnet build
 
 The DLL can be found under the bin folder. You can link it in your project, then
 include the relevant namespaces:
