@@ -1,14 +1,8 @@
 Simulation Project
 ==================
 
-To Do:
-
-* Explain what a simulation project is and what it contains
-* How to create a simulation project with the SDK
-
-A simulation project is a container  for the elements needed to setup a simulation, the two most
-important of them being the CAD geometry and the simulation or physics setup. We can visualize
-the hierarchy with a tree structure:
+A simulation project is a container for the building blocks needed to setup a simulation: the two most
+important of them being the CAD geometry and the physics setup. We can visualize the hierarchy with a tree structure:
 
 .. code-block::
 
@@ -26,9 +20,9 @@ the hierarchy with a tree structure:
 
 
 Eeach simulation is linked to one geometry, and each simulation setup contains the physics definition.
-More details to follow in the specific steps.
+More details to follow in the specific steps for geometry and simulation workflows.
 
-In order to create and manipulate simulation projects, the SimScale SDK provides a Projects API client:
+In order to create and manipulate simulation projects, the SimScale SDK provides a Projects API client module:
 
 .. code-block:: python
 
@@ -43,7 +37,7 @@ In order to create and manipulate simulation projects, the SimScale SDK provides
 
 
 We can see that the projects api object is initialized with the ``api_client``, which we previously
-initialized with our Api key and host URL.
+initialized with the data for our Api key and host URL.
 
 The project data is hosted in a ``Project`` object, which is then included as the argument of the
 actual Api call to create the project:
