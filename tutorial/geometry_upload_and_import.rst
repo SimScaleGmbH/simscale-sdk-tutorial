@@ -153,7 +153,7 @@ the result, such as getting the id for the imported geometry:
 .. code-block:: python
 
     if geometry_import.status != "FINISHED":
-        raise Error("Geometry import operation was canceled or failed.")
+        raise Exception("Geometry import operation was canceled or failed.")
 
     geometry_id = geometry_import.geometry_id
 
