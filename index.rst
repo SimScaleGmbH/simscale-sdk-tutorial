@@ -29,13 +29,24 @@ of the simulation workflow, and want to lear how to automate their simualtions w
 If you are a new user to SimScale, please first get a grasp of the workflow
 and capabilites of the platform, for instance by following the introductory and advaced tutorials
 
-`Introductory Tutorials <https://www.simscale.com/tutorials>`_ 
+`Introductory Platform Tutorials <https://www.simscale.com/tutorials>`_ 
 
-`Advanced Tutorials <https://www.simscale.com/docs/tutorials>`_
+`Advanced Platform Tutorials <https://www.simscale.com/docs/tutorials>`_
+
+Also, this tutorial assumes that the user is already experienced in the python or C#
+programming languages and knowledgeable in basic to intermediate programming concepts. Most 
+of the presented code is in the form of snippets and will not run on its own. For instance, 
+variables created in previous pages might be used without additional notice or context.
+
+Although the individual pages can serve as reference, following the tutorial step by step 
+might be required to have a full understanding of the API workflow.
+
+
+Summary
+-------
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
    tutorial/installation
    tutorial/api_keys
