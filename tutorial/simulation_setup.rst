@@ -107,7 +107,7 @@ We will focus, as an example, on the most basic setup for a fluid simulation: th
 model and the boundary conditions.
 
 Material Model
---------------
+~~~~~~~~~~~~~~
 
 Being a single fluid phase simulation, there is only one material that we need to setup.
 Following we will enter the properties for water at ambient temperature, and assign it
@@ -143,7 +143,7 @@ to the only volumetric region in the geometry:
 
 
 Boundary conditions
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 In this simulation we need three boundary conditions:
 
