@@ -2,7 +2,7 @@ Simulation Setup
 ================
 
 Having the geometry model already available in the project, the next step to 
-setup a simulation is to specify the physcis model. This is performed via a simulation 
+setup a simulation is to specify the physics model. This is performed via a simulation 
 ``Spec`` (short for specification), an object that contains the following data:
 
 * Name of the simulation
@@ -28,7 +28,7 @@ A ``SimulationSpec`` object is initialized with this data, then passed to the
     simulation = simulation_api.create_simulation(project_id, simulation_spec)
 
 
-Now we need to dwelve deeper into the physics ``model``.
+Now we need to delve deeper into the physics ``model``.
 
 Model
 -----
@@ -40,7 +40,7 @@ For instance, the following data is captured in the model:
 * Materials models
 * Initial conditions
 * Boundary conditions
-* Interactions between multiple components
+* Interactions between multiple components (contacts)
 * Numerical methods and parameters
 * Simulated time and time stepping
 * Computed output fields and derived data
@@ -49,8 +49,8 @@ Notice that this is a rather long amount of data, and as such it will be broken
 part by part. Also, not all of this data is required to setup a simulation, and
 the specifics will depend on the particular physics of the model.
 
-For the sake of this tutorial, we will cover an ``Incompressible`` model as
-an exampl:
+For the sake of this tutorial, we will cover the ``Incompressible`` model as
+an example:
 
 .. code-block:: python
 
@@ -101,13 +101,13 @@ each one of these objects has its own parameters to finely tune the behavior of 
 simulation. If you need to look at the detail of each object and its parameters, please 
 check the SDK documentation:
 
-`Python SDK Documentation <https://simscalegmbh.github.io/simscale-python-sdk/simscale_sdk.api.html>`
+`Python SDK Documentation <https://simscalegmbh.github.io/simscale-python-sdk/simscale_sdk.api.html>`_
 
 We will focus, as an example, on the most basic setup for a fluid simulation: the material 
 model and the boundary conditions.
 
-Material Model
-~~~~~~~~~~~~~~
+Material
+~~~~~~~~
 
 Being a single fluid phase simulation, there is only one material that we need to setup.
 Following we will enter the properties for water at ambient temperature, and assign it
@@ -226,7 +226,7 @@ The boundary conditions are setup with the following code:
 Generating SDK Code
 -------------------
 
-It might be difficult to navigate the documentation and reference pages to create a 
+It might be a little difficult to navigate the documentation and reference pages to create a 
 simulation spec from scratch. Some of the reasons would be:
 
 * How to find out the internal entity name for my part or face?
@@ -273,4 +273,4 @@ Now, to generate the SDK code for this simulation model, we can do as follows:
         f.write(str(sdk_code))
 
 
-Then all of the simulation spec will be found in the ``sim_code.py`` file.
+Then all of the code to define the simulation model object will be found in the ``sim_code.py`` file.
