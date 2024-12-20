@@ -107,3 +107,31 @@ so the platform knows that it should use it as part of the simulation computatio
 
 Now our simulation is ready for computation, with its physics model and a mesh
 completely defined.
+
+Generating Code for Mesh Model
+------------------------------
+
+In the same fashion as a simulation model, SDK code can be generated from an existing
+mesh that was set up in the Workbench for convenience (for example, to easily assign 
+refinements to geometry faces). To achieve this, we make use of the 
+``MeshOperationsApi.get_mesh_operation_sdk_code`` method:
+
+
+.. code-block:: python
+
+    mesh_skd_code = mesh_operation_api.get_mesh_opeartion_sdk_code(
+        project_id,
+        mesh_operation_id,
+    )
+
+
+The ``mesh_operation_id`` can be obtained in a similar fashion to the way is
+done for a simulation:
+
+
+.. code-block:: python
+
+    print(mesh_operation_api.get_mesh_operations(project_id)
+    
+    
+Then identifying the proper mesh and noting down its ``mesh_operation_id``.
