@@ -51,7 +51,7 @@ for the request is available in the ``storage`` object:
 
 .. code-block:: python
 
-    with open("cad_file.x_t", "rb") as file:
+    with open("pipe_junction_model_tutorial.x_t", "rb") as file:
         
         api_client.rest_client.PUT(
             url=storage.url,
@@ -61,6 +61,10 @@ for the request is available in the ``storage`` object:
             body=file.read()
         )
 
+
+The CAD file for the tutorial can be downloaded from the following link:
+
+`Pipe Junction CAD Model <https://github.com/SimScaleGmbH/simscale-python-sdk/blob/master/examples/fixtures/pipe_junction_model_tutorial.x_t>`_
 
 After the request is completed, the file is available in the SimScale's cloud storage and ready to
 be imported into a simulation project. For instance, the storage is identified by an ``UUID``:

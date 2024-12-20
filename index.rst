@@ -33,6 +33,9 @@ and capabilites of the platform, for instance by following the introductory and 
 
 `Advanced Platform Tutorials <https://www.simscale.com/docs/tutorials>`_
 
+In fact, the SDK driven simulation that will be developed in this guide corresponds with the
+"Fluid Flow Simulation" step-by-step tutorial from the introductory tutorials.
+
 Also, this tutorial assumes that the user is already experienced in the python or C#
 programming languages and knowledgeable in basic to intermediate programming concepts. Most 
 of the presented code is in the form of snippets and will not run on its own. For instance, 
@@ -40,6 +43,7 @@ variables created in previous pages might be used without additional notice or c
 
 Although the individual pages can serve as reference, following the tutorial step by step 
 might be required to have a full understanding of the API workflow.
+
 
 
 Summary
