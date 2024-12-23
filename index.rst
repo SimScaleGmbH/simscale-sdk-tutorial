@@ -60,5 +60,3 @@ Summary
    tutorial/meshing
    tutorial/simulation_run
    tutorial/postprocessing
-   advanced/advanced_topics
-

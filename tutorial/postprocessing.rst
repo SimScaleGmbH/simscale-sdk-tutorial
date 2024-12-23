@@ -54,7 +54,7 @@ create a series of configuration objects:
 
     model_settings = sim.ModelSettings(
         parts=[],
-        sacalar_field=scalar_field,
+        scalar_field=scalar_field,
     )
 
     cutting_plane = sim.CuttingPlane(
@@ -121,7 +121,7 @@ happens in the platform:
 
     create_report_res = reports_api.create_report(
         project_id,
-        report_request,
+        report_req,
     )
 
     report_id = create_report_res.report_id

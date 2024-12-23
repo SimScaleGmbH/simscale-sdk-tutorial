@@ -18,7 +18,7 @@ import or mesh computation operations:
 
     simulation_run = simulation_run_api.create_simulation_run(
         project_id,
-        simulation_id,
+        simulation.simulation_id,
         sim.SimulationRun(
             name="Run 1"
         ),
@@ -26,15 +26,15 @@ import or mesh computation operations:
 
     simulation_run_api.start_simulation_run(
         project_id,
-        simulation_id,
+        simulation.simulation_id,
         simulation_run.run_id,
     )
 
-    while simulation_run.status not in ("FINSIHED", "CANCELED", "FAILED"):
+    while simulation_run.status not in ("FINISHED", "CANCELED", "FAILED"):
 
         simualtion_run = simulation_run_api.get_simulation_run(
             project_id,
-            simulation_id,
+            simulation.simulation_id,
             simulation_run.run_id,
         )
 

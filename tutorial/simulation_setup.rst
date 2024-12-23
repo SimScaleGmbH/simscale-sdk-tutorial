@@ -25,7 +25,7 @@ A ``SimulationSpec`` object is initialized with this data, then passed to the
         model=model
     )
 
-    simulation = simulation_api.create_simulation(project_id, simulation_spec)
+    simulation = simulations_api.create_simulation(project_id, simulation_spec)
 
 
 Now we need to delve deeper into the physics ``model``.
@@ -64,8 +64,8 @@ an example:
             ...
         ),
         numerics=sim.FluidNumerics(
-            relaxation_factors=sim.RelaxationFactor(),
-            pressure_reference_vale=sim.DimensionalPressure(value=0, unit="Pa"),
+            relaxation_factor=sim.RelaxationFactor(),
+            pressure_reference_value=sim.DimensionalPressure(value=0, unit="Pa"),
             residual_controls=sim.ResidualControls(
                 velocity=sim.Tolerance(),
                 pressure=sim.Tolerance(),
@@ -90,9 +90,9 @@ an example:
             delta_t=sim.DimensionalTime(value=1, unit="s"),
             write_control=sim.TimeStepWriteControl(write_interval=20),
             max_run_time=sim.DimensionalTime(value=10000, unit="s"),
-            decompose_altorithm=sim.ScotchDecomposeAlgorithm(),
-        )
-        result_control=sim.FluidResultControls()
+            decompose_algorithm=sim.ScotchDecomposeAlgorithm(),
+        ),
+        result_control=sim.FluidResultControls(),
     )
 
 
@@ -180,7 +180,7 @@ The boundary conditions are setup with the following code:
                 ],
             ),
         ),
-        VelocityInletBC(
+        sim.VelocityInletBC(
             name="Velocity inlet 2",
             velocity=sim.FixedValueVBC(
                 value=sim.DimensionalVectorFunctionSpeed(
@@ -204,7 +204,7 @@ The boundary conditions are setup with the following code:
                 ],
             ),
         ),
-        PressureOutletBC(
+        sim.PressureOutletBC(
             name="Pressure outlet",
             gauge_pressure=sim.FixedValuePBC(
                 value=sim.DimensionalFunctionPressure(

@@ -19,7 +19,7 @@ If doing so, your ``.env`` file should contain a line such as:
 
 .. code-block:: python
 
-    SIMSCALE_API_KEY=(generated api key)
+    SIMSCALE_API_KEY="your_api_key"
 
 
 API Client
@@ -37,13 +37,10 @@ The following snippet shows an example of the creation and setup of the ``ApiCli
     # Python
 
     import os
-    from dotenv import load_dotenv()
 
     import simscale_sdk as sim
 
-    load_dotenv()
-
-    API_KEY = os.getenv('SIMSCALE_API_KEY')
+    API_KEY = "your_api_key"
     API_HOST_URL = "https://api.simscale.com/v0"
 
     configuration = sim.Configuration()
@@ -63,11 +60,9 @@ The following snippet shows an example of the creation and setup of the ``ApiCli
     using SimScale.Sdk.Api;
     using SimScale.Sdk.Client;
     using SimScale.Sdk.Model;
-    using dotenv.net;
 
-    DotEnv.Load();
 
-    var API_KEY = System.Environment.GetEnvironmentVariable("SIMSCALE_API_KEY")
+    var API_KEY = "your_api_key"
     var API_HOST_URL = "https://api.simscale.com/v0"
 
     Configuration configuration = new Configuration();

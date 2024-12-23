@@ -24,11 +24,13 @@ with a model object. It can be done as follows:
             curvature=sim.AutomaticCurvature(),
         ),
         automatic_layer_settings=sim.AutomaticLayerOn(
-            number_of_layers=3,
-            total_relative_thickness=0.4,
-            growth_rate=1.5
+            layer_type=sim.FractionalHeight2(
+                number_of_layers=3,
+                total_relative_thickness=0.4,
+                growth_rate=1.5
+            ),
         ),
-        pysics_based_meshing=True,
+        physics_based_meshing=True,
         hex_core=True,
     )
 
@@ -69,7 +71,7 @@ The mesh operation object is used to launch the computation and track its progre
     mesh_operation_api.start_mesh_operation(
         project_id,
         mesh_operation.mesh_operation_id,
-        simulation_id=simulation_id,
+        simulation_id=simulation.simulation_id,
     )
 
     while mesh_operation.status not in ("FINISHED", "CANCELED", "FAILED"):
@@ -98,11 +100,11 @@ so the platform knows that it should use it as part of the simulation computatio
 .. code-block:: python
 
     # Might not be needed if the simulation_spec object is updated
-    simulation_spec = simulations_api.get_simulation(project_id, simulation_id)
+    simulation_spec = simulations_api.get_simulation(project_id, simulation.simulation_id)
 
     simulation_spec.mesh_id = mesh_operation.mesh_id
 
-    simulations_api.update_simulation(project_id, simulation_id, simulation_spec)
+    simulations_api.update_simulation(project_id, simulation.simulation_id, simulation_spec)
 
 
 Now our simulation is ready for computation, with its physics model and a mesh

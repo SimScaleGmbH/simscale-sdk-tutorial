@@ -47,8 +47,8 @@ actual Api call to create the project:
     import simscale_sdk as sim
 
     project_data = sim.Project(
-        name="My first simulation project",
-        description="Created via SDK",
+        name="SDK Tutorial",
+        description="Created with SimScale SDK",
         measurement_system="SI"
     )
 
